@@ -23,13 +23,12 @@ void Interfaz::menuPrincipal() {
         cout << "+------------------------------------------------+" << endl;
         cout << "\033[8;22H";
         opc = getchar();
-        cout << endl << endl;
-        if(!validarOpc(opc)) {
+        cout << endl;
+        if(validarOpc(opc) == false) {
             cout << "| Opción inválida. Intente de nuevo.             |" << endl;
             cout << "+------------------------------------------------+" << endl;
             pausa();
-        }
-        else{
+        } else {
             if(opc == 49) {
                 capturarNumero();
             } else if(opc == 50) {
@@ -37,7 +36,8 @@ void Interfaz::menuPrincipal() {
                 cout << "+------------------------------------------------+" << endl;
                 break;
             } else {
-
+                cout << "| Opción inválida. Intente de nuevo.             |" << endl;
+                cout << "+------------------------------------------------+" << endl;
             }
             pausa();
         }
@@ -46,27 +46,48 @@ void Interfaz::menuPrincipal() {
 
 void Interfaz::capturarNumero() {
     system(CLEAR);
+    NumeroFeliz nf;
     cout << "+------------------------------------------------+" << endl;
     cout << "|       Cálculo de numero feliz  V 1.0           |" << endl;
     cout << "+------------------------------------------------+" << endl;
+    cout << "| Ingrese el número a evaluar: ";
+    int n = 0;
+    n = getchar();
+    bool f = true;
+    while(n != 10){
+        if(!nf.numeroFelizValido(n)){
+            f = false;
+        }
+        n = getchar();
+    }
+    if(f == true){
+        cout << "+------------------------------------------------+" << endl;
+        cout << "| Cálculando el tiempo estimado...               |" << endl;
+        cout << "+------------------------------------------------+" << endl;
+        nf.resultado();
+    }
+    else{
+        cout << "+------------------------------------------------+" << endl;
+        cout << "| El número ingresado es inválido.               |" << endl;
+        cout << "+------------------------------------------------+" << endl;
+    }
 
 }
 
 bool Interfaz::validarOpc(const int & opc) {
-    if(opc == 10){
+    if(opc == 10) {
         return false;
     }
     int x = getchar();
-    if(x != 10){
+    if(x != 10) {
         cin.ignore();
-        ungetc(10, stdin);
         return false;
     }
-    ungetc(10, stdin);
     return true;
 }
 
 void Interfaz::pausa() {
     cout << endl << endl << "Presione [Enter] para continuar..." << endl;
+    cin.get();
 }
 

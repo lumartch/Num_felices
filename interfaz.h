@@ -7,8 +7,6 @@
 #define CLEAR "clear"
 #endif // WIN_32
 
-#include <iostream>
-#include <cstdio>
 #include "numerofeliz.h"
 
 using namespace std;
