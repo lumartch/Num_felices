@@ -1,13 +1,17 @@
 #ifndef INTERFAZ_H
 #define INTERFAZ_H
 
+// Variable dependiente del OS, para limpiar pantalla.
 #ifdef WIN_32
 #define CLEAR "cls"
 #else
 #define CLEAR "clear"
 #endif // WIN_32
 
+// Objeto para cálcular el número feliz.
 #include "numerofeliz.h"
+// Librería para cancelar la señal de CTRL-C
+#include <csignal>
 
 using namespace std;
 
