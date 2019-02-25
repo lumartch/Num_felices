@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1551077984 source:/home/lumartch/Num_felices/main.cpp
+	"interfaz.h"
+
+1551080860 source:/home/lumartch/Num_felices/interfaz.cpp
+	"interfaz.h"
+
+1551080451 /home/lumartch/Num_felices/interfaz.h
+	<iostream>
+	<cstdio>
+	"numerofeliz.h"
+
+1551077945 source:/home/lumartch/Num_felices/numerofeliz.cpp
+	"numerofeliz.h"
+
+1551077945 /home/lumartch/Num_felices/numerofeliz.h
+
