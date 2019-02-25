@@ -12,6 +12,8 @@
 #include "numerofeliz.h"
 // Librería para cancelar la señal de CTRL-C
 #include <csignal>
+// Librería para la función sleep
+#include <unistd.h>
 
 using namespace std;
 

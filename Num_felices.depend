@@ -2,17 +2,18 @@
 1551127293 source:/home/lumartch/Num_felices/main.cpp
 	"interfaz.h"
 
-1551129316 source:/home/lumartch/Num_felices/interfaz.cpp
+1551129818 source:/home/lumartch/Num_felices/interfaz.cpp
 	"interfaz.h"
 
-1551129633 /home/lumartch/Num_felices/interfaz.h
+1551131300 /home/lumartch/Num_felices/interfaz.h
 	"numerofeliz.h"
 	<csignal>
+	<unistd.h>
 
 1551126975 source:/home/lumartch/Num_felices/numerofeliz.cpp
 	"numerofeliz.h"
 
-1551127548 /home/lumartch/Num_felices/numerofeliz.h
+1551131868 /home/lumartch/Num_felices/numerofeliz.h
 	<queue>
 	<vector>
 	<string>

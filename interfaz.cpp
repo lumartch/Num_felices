@@ -71,9 +71,16 @@ void Interfaz::capturarNumero() {
         n = getchar();
     }
     if(f == true){
-        cout << "+------------------------------------------------+" << endl;
-        cout << "| Cálculando el tiempo estimado...               |" << endl;
-        cout << "+------------------------------------------------+" << endl;
+        cout << "+---------------------------------------------------+" << endl;
+        cout << "| Cálculando el tiempo estimado                     |" << endl;
+        sleep(1);
+        cout << "." << endl;
+        sleep(1);
+        cout << "." << endl;
+        sleep(1);
+        cout << "." << endl;
+        cout << "| El tiempo requerido será de: " << endl;
+        cout << "+---------------------------------------------------+" << endl;
         if(nf.esFeliz()){
             cout << "El número ingresado es feliz." << endl;
         }
@@ -86,7 +93,6 @@ void Interfaz::capturarNumero() {
         cout << "| El número ingresado es inválido.               |" << endl;
         cout << "+------------------------------------------------+" << endl;
     }
-
 }
 
 bool Interfaz::validarOpc(const int & opc) {

@@ -19,6 +19,7 @@ private:
     std::queue<int> nf;
     std::vector<unsigned long long int> repetidos;
     bool bandera = true;
+    int ciclos;
     unsigned long long int getSumatoria();
     void resultado();
 };

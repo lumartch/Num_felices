@@ -1,7 +1,7 @@
 #include "numerofeliz.h"
 
 NumeroFeliz::NumeroFeliz() {
-
+    ciclos = 0;
 }
 
 NumeroFeliz::~NumeroFeliz() {
@@ -60,14 +60,12 @@ void NumeroFeliz::resultado() {
             setDigNumeroFeliz(res%10);
             res = res/10;
         }
-        /*std::cout << "AuxSize: "<< aux.size() << " ; nfSize: " << nf.size() << std::endl;
-        std::cout << "nf Contenido: " << toString() << std::endl;
-        std::cin.get();*/
         resultado();
     }
 }
 
 bool NumeroFeliz::esFeliz() {
+    // Hace el cálculo del número felíz y regresa la bandera por si hubo cambio.
     resultado();
     return bandera;
 }
