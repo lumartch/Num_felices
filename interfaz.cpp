@@ -50,7 +50,13 @@ void Interfaz::capturarNumero() {
     cout << "+------------------------------------------------+" << endl;
     cout << "|       Cálculo de numero feliz  V 1.0           |" << endl;
     cout << "+------------------------------------------------+" << endl;
-    cout << "| Ingrese el número a evaluar: ";
+    cout << "| Los números solo pueden ser enteros positivos, |" << endl;
+    cout << "| no introduzca el simbolo '+', el programa los  |" << endl;
+    cout << "| detecta inmediatamente.                        |" << endl;
+    cout << "+------------------------------------------------+" << endl;
+    cout << "| Ingrese el número a evaluar (0 al... Inf): "      << endl;
+    cout << "+------------------------------------------------+" << endl;
+    cout << "\033[8;46H";
     int n = 0;
     n = getchar();
     bool f = true;
@@ -64,7 +70,12 @@ void Interfaz::capturarNumero() {
         cout << "+------------------------------------------------+" << endl;
         cout << "| Cálculando el tiempo estimado...               |" << endl;
         cout << "+------------------------------------------------+" << endl;
-        nf.resultado();
+        if(nf.esFeliz()){
+            cout << "El número ingresado es feliz." << endl;
+        }
+        else{
+            cout << "El número ingresado es un maldito infeliz." << endl;
+        }
     }
     else{
         cout << "+------------------------------------------------+" << endl;
