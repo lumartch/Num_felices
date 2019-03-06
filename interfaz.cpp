@@ -21,10 +21,10 @@ void Interfaz::menuPrincipal() {
         cout << "|    1: Ingresar nuevo número.                   |" << endl;
         cout << "|    2: Salir.                                   |" << endl;
         cout << "+------------------------------------------------+" << endl;
-        cout << "| Ingrese su opción: ";
-        //cout << "| Ingrese su opción:                             |" << endl;
-        //cout << "+------------------------------------------------+" << endl;
-        //cout << "\033[8;22H";
+        cout << "| Ingrese su opción:                             |" << endl;
+        cout << "+------------------------------------------------+" << endl;
+        cout << "\033[8;22H";
+        //cout << "| Ingrese su opción: ";
         opc = getchar();
         cout << endl;
         if(validarOpc(opc) == false) {
@@ -57,10 +57,10 @@ void Interfaz::capturarNumero() {
     cout << "| no introduzca el simbolo '+', el programa los  |" << endl;
     cout << "| detecta inmediatamente.                        |" << endl;
     cout << "+------------------------------------------------+" << endl;
-    cout << "| Ingrese el número a evaluar (0 al... Inf): ";
-    //cout << "| Ingrese el número a evaluar (0 al... Inf): "      << endl;
-    //cout << "+------------------------------------------------+" << endl;
-    //cout << "\033[8;46H";
+    cout << "| Ingrese el número a evaluar (0 al... Inf): "      << endl;
+    cout << "+------------------------------------------------+" << endl;
+    cout << "\033[8;46H";
+    //cout << "| Ingrese el número a evaluar (0 al... Inf): ";
     int n = 0;
     n = getchar();
     bool f = true;
@@ -96,15 +96,11 @@ void Interfaz::capturarNumero() {
 }
 
 bool Interfaz::validarOpc(const int & opc) {
-    if(opc == 10) {
-        return false;
+    while(getchar() != 10);
+    if(opc == 49 or opc == 50){
+        return true;
     }
-    int x = getchar();
-    if(x != 10) {
-        cin.ignore();
-        return false;
-    }
-    return true;
+    return false;
 }
 
 void Interfaz::pausa() {
