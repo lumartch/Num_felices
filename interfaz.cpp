@@ -15,7 +15,7 @@ void Interfaz::menuPrincipal() {
     while(true) {
         system(CLEAR);
         cout << "+------------------------------------------------+" << endl;
-        cout << "|       Cálculo de numero feliz  V 1.0           |" << endl;
+        cout << "|       Cálculo de numero feliz  V 1.2           |" << endl;
         cout << "+------------------------------------------------+" << endl;
         cout << "| ¿Qué desea hacer?                              |" << endl;
         cout << "|    1: Ingresar nuevo número.                   |" << endl;
@@ -95,10 +95,19 @@ void Interfaz::capturarNumero() {
     }
 }
 
+// Función para solo válidar los caracteres dentro de las opciones actuales
 bool Interfaz::validarOpc(const int & opc) {
-    while(getchar() != 10);
-    if(opc == 49 or opc == 50){
-        return true;
+    int chSobrantes = 0;
+    while(getchar() != 10){
+        chSobrantes++;
+    }
+    if(chSobrantes > 0){
+        return false;
+    }
+    else{
+        if(opc == 49 or opc == 50){
+            return true;
+        }
     }
     return false;
 }

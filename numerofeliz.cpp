@@ -2,6 +2,7 @@
 
 NumeroFeliz::NumeroFeliz() {
     ciclos = 0;
+    tamanio = 0;
 }
 
 NumeroFeliz::~NumeroFeliz() {
@@ -13,6 +14,7 @@ bool NumeroFeliz::numeroFelizValido(const int& n) {
     // En caso de ingresar un caracter inválido, se regresa un false.
     if(n >= 48 and n <= 57) {
         setDigNumeroFeliz(n - 48);
+        tamanio++;
         return true;
     }
     return false;
@@ -24,6 +26,10 @@ void NumeroFeliz::setDigNumeroFeliz(const int& n) {
         nf.push(n);
         repetidos.push_back(n);
     }
+}
+
+unsigned long long int NumeroFeliz::getTamanio() {
+    return tamanio;
 }
 
 void NumeroFeliz::resultado() {
@@ -68,18 +74,6 @@ bool NumeroFeliz::esFeliz() {
     // Hace el cálculo del número felíz y regresa la bandera por si hubo cambio.
     resultado();
     return bandera;
-}
-
-
-std::string NumeroFeliz::toString() {
-    // Regresa el número dentro de la cola en formato string
-    std::string r = "";
-    for(unsigned int i = 0; i < nf.size() ; i++) {
-        r += std::to_string(nf.front());
-        nf.push(nf.front());
-        nf.pop();
-    }
-    return r;
 }
 
 unsigned long long int NumeroFeliz::getSumatoria() {
