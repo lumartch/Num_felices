@@ -32,6 +32,25 @@ unsigned long long int NumeroFeliz::getTamanio() {
     return tamanio;
 }
 
+double NumeroFeliz::precalculoTiempo() {
+    double tme = 0;
+    int l = (tamanio*10)/2;
+    srand(time(nullptr));
+    for(int j = 0; j < l; j++, l--){
+        for(int k = 0; k < 2; k++){
+            double x = rand() % 9 - 1;
+            for(int j = 0; j < l; j++){
+                tme += x/1000000000;
+            }
+            tme += x/1000000000;
+            x = rand() % 7-3;
+            tme += x/1000000000;
+        }
+    }
+    return tme;
+}
+
+
 void NumeroFeliz::resultado() {
     // Esta parte del código realiza los cálculos pertinentes para los números felices
     // En caso de que la sumatoria sea igual a 1, quiere decir que es feliz.

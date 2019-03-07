@@ -50,15 +50,15 @@ void Interfaz::menuPrincipal() {
 void Interfaz::capturarNumero() {
     system(CLEAR);
     NumeroFeliz nf;
-    cout << "+------------------------------------------------+" << endl;
-    cout << "|       Cálculo de numero feliz  V 1.0           |" << endl;
-    cout << "+------------------------------------------------+" << endl;
-    cout << "| Los números solo pueden ser enteros positivos, |" << endl;
-    cout << "| no introduzca el simbolo '+', el programa los  |" << endl;
-    cout << "| detecta inmediatamente.                        |" << endl;
-    cout << "+------------------------------------------------+" << endl;
+    cout << "+---------------------------------------------------+" << endl;
+    cout << "|       Cálculo de numero feliz  V 1.2              |" << endl;
+    cout << "+---------------------------------------------------+" << endl;
+    cout << "| Los números solo pueden ser enteros positivos,    |" << endl;
+    cout << "| no introduzca el simbolo '+', el programa los     |" << endl;
+    cout << "| detecta inmediatamente.                           |" << endl;
+    cout << "+---------------------------------------------------+" << endl;
     cout << "| Ingrese el número a evaluar (0 al... Inf): "      << endl;
-    cout << "+------------------------------------------------+" << endl;
+    cout << "+---------------------------------------------------+" << endl;
     cout << "\033[8;46H";
     //cout << "| Ingrese el número a evaluar (0 al... Inf): ";
     int n = 0;
@@ -70,29 +70,27 @@ void Interfaz::capturarNumero() {
         }
         n = getchar();
     }
-    if(f == true){
+    if(f == true and nf.getTamanio() > 0){
         cout << "+---------------------------------------------------+" << endl;
         cout << "| Cálculando el tiempo estimado                     |" << endl;
+        cout << "| El tiempo requerido será de: ";
+        printf("%.12fs \n", nf.precalculoTiempo());
+        cout << "+---------------------------------------------------+" << endl;
         sleep(1);
-        cout << "." << endl;
-        sleep(1);
-        cout << "." << endl;
-        sleep(1);
-        cout << "." << endl;
-        cout << "| El tiempo requerido será de: " << endl;
+        cout << "| El tamaño del número ingresado es de: " << nf.getTamanio() << endl;
         cout << "+---------------------------------------------------+" << endl;
         if(nf.esFeliz()){
-            cout << "El número ingresado es feliz." << endl;
+            cout << "|         El número ingresado es feliz. c:          |" << endl;
         }
         else{
-            cout << "El número ingresado es un maldito infeliz." << endl;
+            cout << "|    El número ingresado es un maldito infeliz. :'c |" << endl;
         }
     }
     else{
-        cout << "+------------------------------------------------+" << endl;
-        cout << "| El número ingresado es inválido.               |" << endl;
-        cout << "+------------------------------------------------+" << endl;
+        cout << "+---------------------------------------------------+" << endl;
+        cout << "|    El número ingresado es inválido.               |" << endl;
     }
+    cout << "+---------------------------------------------------+" << endl;
 }
 
 // Función para solo válidar los caracteres dentro de las opciones actuales

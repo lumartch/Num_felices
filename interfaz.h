@@ -14,6 +14,8 @@
 #include <csignal>
 // Librería para la función sleep
 #include <unistd.h>
+//
+#include <cstdio>
 
 using namespace std;
 

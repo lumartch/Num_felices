@@ -12,6 +12,7 @@ public:
     virtual ~NumeroFeliz();
     bool numeroFelizValido(const int &n);
     unsigned long long int getTamanio();
+    double precalculoTiempo();
     bool esFeliz();
 
 private:
