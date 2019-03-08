@@ -14,7 +14,7 @@
 #include <csignal>
 // Librería para la función sleep
 #include <unistd.h>
-//
+// Librería para impresion con Printf
 #include <cstdio>
 
 using namespace std;

@@ -1,20 +1,20 @@
 # depslib dependency file v1.0
-1551937307 source:/home/lumartch/Num_felices/main.cpp
+1551972401 source:/home/lumartch/Num_felices/main.cpp
 	"interfaz.h"
 
-1551937713 source:/home/lumartch/Num_felices/interfaz.cpp
+1551972715 source:/home/lumartch/Num_felices/interfaz.cpp
 	"interfaz.h"
 
-1551937426 /home/lumartch/Num_felices/interfaz.h
+1551972375 /home/lumartch/Num_felices/interfaz.h
 	"numerofeliz.h"
 	<csignal>
 	<unistd.h>
 	<cstdio>
 
-1551938524 source:/home/lumartch/Num_felices/numerofeliz.cpp
+1551940247 source:/home/lumartch/Num_felices/numerofeliz.cpp
 	"numerofeliz.h"
 
-1551937152 /home/lumartch/Num_felices/numerofeliz.h
+1551940247 /home/lumartch/Num_felices/numerofeliz.h
 	<queue>
 	<vector>
 	<string>

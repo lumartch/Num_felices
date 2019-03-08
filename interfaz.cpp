@@ -95,6 +95,11 @@ void Interfaz::capturarNumero() {
 
 // Función para solo válidar los caracteres dentro de las opciones actuales
 bool Interfaz::validarOpc(const int & opc) {
+    // Válida  si la entrada viene vacía
+    if(opc == 10){
+        return false;
+    }
+    // Valida si la entrada viene con mas de un caracter
     int chSobrantes = 0;
     while(getchar() != 10){
         chSobrantes++;
@@ -102,10 +107,9 @@ bool Interfaz::validarOpc(const int & opc) {
     if(chSobrantes > 0){
         return false;
     }
-    else{
-        if(opc == 49 or opc == 50){
-            return true;
-        }
+    // Válida si la entrada esta dentro de las opciones
+    if(opc == 49 or opc == 50){
+        return true;
     }
     return false;
 }
