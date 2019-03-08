@@ -37,6 +37,7 @@ void Interfaz::menuPrincipal() {
             } else if(opc == 50) {
                 cout << "| Gracias por usar el calculador de Num. Felices.|" << endl;
                 cout << "+------------------------------------------------+" << endl;
+                pausa();
                 break;
             } else {
                 cout << "| Opción inválida. Intente de nuevo.             |" << endl;
@@ -116,6 +117,6 @@ bool Interfaz::validarOpc(const int & opc) {
 
 void Interfaz::pausa() {
     cout << endl << endl << "Presione [Enter] para continuar..." << endl;
-    cin.get();
+    while(getchar() != 10);
 }
 
