@@ -1,6 +1,8 @@
 #include "interfaz.h"
 
 Interfaz::Interfaz() {
+    // Comando para desbloquear el límite de caracteres dentro de la consola.
+    system(NOLIMIT);
     // SIGINT -> Señal de macros, SIG_IGN -> Handler para ignorar.
     signal(SIGINT, SIG_IGN);
     menuPrincipal();

@@ -4,8 +4,10 @@
 // Variable dependiente del OS, para limpiar pantalla.
 #ifdef WIN_32
 #define CLEAR "cls"
+#define NOLIMIT "stty cbreak"
 #else
 #define CLEAR "clear"
+#define NOLIMIT "stty cbreak"
 #endif // WIN_32
 
 // Objeto para cálcular el número feliz.
