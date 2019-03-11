@@ -34,19 +34,21 @@ unsigned long long int NumeroFeliz::getTamanio() {
 
 double NumeroFeliz::precalculoTiempo() {
     double tme = 0;
-    int l = (tamanio*10)/2;
+    int l = tamanio;
     srand(time(nullptr));
-    for(int j = 0; j < l; j++, l--){
-        for(int k = 0; k < 2; k++){
-            double x = rand() % 9 - 1;
-            for(int j = 0; j < l; j++){
-                tme += x/1000000000;
-            }
-            tme += x/1000000000;
-            x = rand() % 7-3;
-            tme += x/1000000000;
-        }
+    for(int i = 0; i < l; i++){
+        // Pre-cálculo para los números que son elevados al cuadrado
+        double x = rand() % 9 - 1;
+        tme += x/10000000;
+        // Pre-cálculo para la suma de todos los valores para asignación en repetidos
+        x = rand() % 7-3;
+        tme += x/10000000;
+        // Pre-cálculo para el modulo y la división final.
+        x = rand() % 7-3;
+        tme += x/10000000;
     }
+    // Se multiplica X2 considerando el peor de los casos
+    tme *= 2;
     return tme;
 }
 

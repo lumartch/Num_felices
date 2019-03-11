@@ -15,7 +15,7 @@ void Interfaz::menuPrincipal() {
     while(true) {
         system(CLEAR);
         cout << "+------------------------------------------------+" << endl;
-        cout << "|       Cálculo de numero feliz  V 1.2           |" << endl;
+        cout << "|       Cálculo de numero feliz  V 1.3           |" << endl;
         cout << "+------------------------------------------------+" << endl;
         cout << "| ¿Qué desea hacer?                              |" << endl;
         cout << "|    1: Ingresar nuevo número.                   |" << endl;
@@ -24,7 +24,6 @@ void Interfaz::menuPrincipal() {
         cout << "| Ingrese su opción:                             |" << endl;
         cout << "+------------------------------------------------+" << endl;
         cout << "\033[8;22H";
-        //cout << "| Ingrese su opción: ";
         opc = getchar();
         cout << endl;
         if(validarOpc(opc) == false) {
@@ -54,7 +53,7 @@ void Interfaz::capturarNumero() {
     system(CLEAR);
     NumeroFeliz nf;
     cout << "+---------------------------------------------------+" << endl;
-    cout << "|       Cálculo de numero feliz  V 1.2              |" << endl;
+    cout << "|       Cálculo de numero feliz  V 1.3              |" << endl;
     cout << "+---------------------------------------------------+" << endl;
     cout << "| Los números solo pueden ser enteros positivos,    |" << endl;
     cout << "| no introduzca el simbolo '+', el programa los     |" << endl;
@@ -63,7 +62,6 @@ void Interfaz::capturarNumero() {
     cout << "| Ingrese el número a evaluar (0 al... Inf): "      << endl;
     cout << "+---------------------------------------------------+" << endl;
     cout << "\033[8;46H";
-    //cout << "| Ingrese el número a evaluar (0 al... Inf): ";
     int n = 0;
     n = getchar();
     bool f = true;
@@ -77,7 +75,7 @@ void Interfaz::capturarNumero() {
         cout << "+---------------------------------------------------+" << endl;
         cout << "| Cálculando el tiempo estimado                     |" << endl;
         cout << "| El tiempo requerido será de: ";
-        //printf("%.12fs \n", nf.precalculoTiempo());
+        printf("%.12fs \n", nf.precalculoTiempo());
         cout << "+---------------------------------------------------+" << endl;
         sleep(1);
         cout << "| El tamaño del número ingresado es de: " << nf.getTamanio() << endl;
@@ -86,7 +84,7 @@ void Interfaz::capturarNumero() {
             cout << "|         El número ingresado es feliz. c:          |" << endl;
         }
         else{
-            cout << "|    El número ingresado es un maldito infeliz. :'c |" << endl;
+            cout << "|    El número ingresado es un pobre infeliz. :'c   |" << endl;
         }
     }
     else{

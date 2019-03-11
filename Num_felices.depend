@@ -2,16 +2,16 @@
 1552183361 source:/home/lumartch/Num_felices/main.cpp
 	"interfaz.h"
 
-1552183977 source:/home/lumartch/Num_felices/interfaz.cpp
+1552325550 source:/home/lumartch/Num_felices/interfaz.cpp
 	"interfaz.h"
 
-1552184247 /home/lumartch/Num_felices/interfaz.h
+1552184267 /home/lumartch/Num_felices/interfaz.h
 	"numerofeliz.h"
 	<csignal>
 	<unistd.h>
 	<cstdio>
 
-1552183361 source:/home/lumartch/Num_felices/numerofeliz.cpp
+1552325469 source:/home/lumartch/Num_felices/numerofeliz.cpp
 	"numerofeliz.h"
 
 1552183361 /home/lumartch/Num_felices/numerofeliz.h
