@@ -1,13 +1,15 @@
 #ifndef INTERFAZ_H
 #define INTERFAZ_H
 
-// Variable dependiente del OS, para limpiar pantalla.
-#ifdef WIN_32
+// Variable dependiente del OS.
+#ifdef _WIN32
 #define CLEAR "cls"
 #define NOLIMIT "stty cbreak"
+#define SANE "stty sane"
 #else
 #define CLEAR "clear"
 #define NOLIMIT "stty cbreak"
+#define SANE "stty sane"
 #endif // WIN_32
 
 // Objeto para cálcular el número feliz.

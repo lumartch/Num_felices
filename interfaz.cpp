@@ -1,8 +1,6 @@
 #include "interfaz.h"
 
 Interfaz::Interfaz() {
-    // Comando para desbloquear el límite de caracteres dentro de la consola.
-    system(NOLIMIT);
     // SIGINT -> Señal de macros, SIG_IGN -> Handler para ignorar.
     signal(SIGINT, SIG_IGN);
     menuPrincipal();
@@ -51,6 +49,8 @@ void Interfaz::menuPrincipal() {
 }
 
 void Interfaz::capturarNumero() {
+    // Comando para desbloquear el límite de caracteres dentro de la consola.
+    system(NOLIMIT);
     system(CLEAR);
     NumeroFeliz nf;
     cout << "+---------------------------------------------------+" << endl;
@@ -77,7 +77,7 @@ void Interfaz::capturarNumero() {
         cout << "+---------------------------------------------------+" << endl;
         cout << "| Cálculando el tiempo estimado                     |" << endl;
         cout << "| El tiempo requerido será de: ";
-        printf("%.12fs \n", nf.precalculoTiempo());
+        //printf("%.12fs \n", nf.precalculoTiempo());
         cout << "+---------------------------------------------------+" << endl;
         sleep(1);
         cout << "| El tamaño del número ingresado es de: " << nf.getTamanio() << endl;
@@ -94,6 +94,8 @@ void Interfaz::capturarNumero() {
         cout << "|    El número ingresado es inválido.               |" << endl;
     }
     cout << "+---------------------------------------------------+" << endl;
+    // Comando para regresar a sus valores predefinidos la terminal
+    system(SANE);
 }
 
 // Función para solo válidar los caracteres dentro de las opciones actuales
